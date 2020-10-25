@@ -1,0 +1,29 @@
+.clipTextHeight(@lineHeight, @row) {
+  line-height: @lineHeight;
+  max-height: calc(@lineHeight * @row);
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-line-clamp: @row;
+  -webkit-box-orient: vertical;
+}
+
+.clipText() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resetBtn() {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  //user-select: none;
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+  word-break: break-word;
+  cursor: pointer;
+}
