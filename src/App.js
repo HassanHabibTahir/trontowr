@@ -8,6 +8,8 @@ const togleSignUpMenu = ()=>{
 
 const gettoogle = document.querySelector('.login-signin');
 gettoogle.classList.add("active")
+const meunuHandler = document.querySelector('.menu-modals');
+meunuHandler.classList.remove("active") 
 
 // classList.remove("open")
 }
@@ -22,10 +24,53 @@ const CloseLogin = ()=>{
 const HandlerFlagmenu = ()=>{
   const languaget = document.querySelector('.language_modal');
   languaget.classList.add("active")
+  const meunuHandler = document.querySelector('.menu-modals');
+meunuHandler.classList.remove("active") 
 }
 const FlagCloseHandler = ()=>{
   const languaget = document.querySelector('.language_modal');
   languaget.classList.remove("active")
+
+}
+
+const DetailsHandler = ()=>{
+ 
+  const Detailslanguagets = document.querySelector('.Details-modal');
+  Detailslanguagets.classList.add("active") 
+}
+
+const DetailsClikeHandler = ()=>{
+  const Detailslanguagets = document.querySelector('.Details-modal');
+  Detailslanguagets.classList.remove("active")  
+}
+
+const MenuHandler = ()=>{
+
+  const meunuHandler = document.querySelector('.menu-modals');
+  meunuHandler.classList.add("active") 
+  
+  console.log(meunuHandler)
+}
+
+
+const MenuCloseHandler = ()=>{
+  const meunuHandler = document.querySelector('.menu-modals');
+  meunuHandler.classList.remove("active") 
+
+}
+
+
+const openShareLanguageHandler = ()=>{
+const languageSharHan= document.querySelector('.language-share-modal');
+languageSharHan.classList.add("active")
+const meunuHandler = document.querySelector('.menu-modals');
+meunuHandler.classList.remove("active") 
+
+}
+
+const closeSharelanguageHandler = ()=>{
+  const languageSharHan= document.querySelector('.language-share-modal');
+  languageSharHan.classList.remove("active")
 
 }
 
@@ -41,15 +86,15 @@ const FlagCloseHandler = ()=>{
                 </a>
                     <menu className="menu m-none">
                         <div>
-                            <a href="https://justswap.org/?lang=en-US#/home?tokenAddress=TLWAwUn79CVehz91A4J9nbh6SPPvDdhba1&type=swap" target="_blank">trade swd</a>
-                            <a target="_blank" href="/static/whitepaper.pdf">whitepaper</a>
+                            <a href="#" target="_blank">trade swd</a>
+                            <a target="_blank" href="#">whitepaper</a>
                         </div>
                         <ul className="soc">
-                            <li><a href="https://twitter.com/shark_tron" target="_blank">
+                            <li><a href="#" target="_blank">
                             <img src="/static/img/svg/main/tw_white.svg" alt=""/>
                         </a></li>
                             <li data-toggle="soc">
-                                <a href="#" target="_blank">
+                                <a href="#"  onClick={openShareLanguageHandler} >
                                 <img src="/static/img/svg/main/tl_white.svg" alt=""/>
                             </a>
                             </li>
@@ -70,8 +115,8 @@ const FlagCloseHandler = ()=>{
                            unlock wallet
                     </button>
                     </menu>
-                    <button className="burger d-none" data-toggle="menu">
-                    <img src="/static/img/svg/burger.svg" alt=""/>
+                    <button className="burger d-none" data-toggle="menu" onClick={MenuHandler} >
+                    <img src="/static/img/svg/burger.svg" alt=""   />
                 </button>
                 </div>
             </header> 
@@ -112,7 +157,7 @@ const FlagCloseHandler = ()=>{
                             <div style={{width : `${0}+%`}}></div>
                         </div>
                         <div className="progress__left"><b>left:</b> [left.Crop(4)] SWD</div>
-                        <button className="button purple" data-toggle="level"> details <img
+                        <button className="button purple" data-toggle="level"  onClick={DetailsHandler} > details <img
                         src="/static/img/svg/arrow.svg"
                         alt=""/></button>
                     </div>
@@ -321,10 +366,10 @@ const FlagCloseHandler = ()=>{
                     <img src="/static/img/svg/main/tw.svg" alt=""/>
                 </a>
                     </li>
-                    <li><a data-toggle="soc" href="#" target="_blank">
+                    <li><a data-toggle="soc" href="#" onClick={openShareLanguageHandler}>
                     <img src="/static/img/svg/main/tl.svg" alt=""/>
                 </a></li>
-                    <li><a href="#" data-toggle="lang" className="lang">
+                    <li><a href="#" data-toggle="lang" className="lang" onClick={HandlerFlagmenu} >
                     <img src="/static/img/flags/en.png" alt=""/>
                 </a></li>
                 </div>
@@ -431,9 +476,9 @@ const FlagCloseHandler = ()=>{
             </div>
         </div>
 
-        <div className="modal" data-modal="soc">
+        <div className="modal  language-share-modal" data-modal="soc">
             <div className="modal__container modal-soc">
-                <button className="close">
+                <button className="close" onClick={closeSharelanguageHandler} >
             <img src="/static/img/svg/main/close.svg" alt=""/></button>
                 <div className="container">
                     <h2>contact us</h2>
@@ -485,14 +530,14 @@ const FlagCloseHandler = ()=>{
 
 
 
-        <div className="modal" data-modal="menu">
+        <div className="modal menu-modals" data-modal="menu">
             <div className="modal__container modal-menu">
-                <button className="close"><img src="/static/img/svg/main/close.svg" alt=""/></button>
+                <button className="close" onClick={MenuCloseHandler}   ><img src="/static/img/svg/main/close.svg" alt=""/></button>
                 <div className="container">
                     <div className="wallet_info">
                         <h6>your wallet</h6>
                         <h5 v-if="user">[user_login]</h5>
-                        <button className="button green" v-if="!user" data-toggle="login">login</button>
+                        <button className="button green" v-if="!user" data-toggle="login" onClick={togleSignUpMenu} >login</button>
                     </div>
                     <menu>
                         <li><a href="https://justswap.org/?lang=en-US#/home?tokenAddress=TLWAwUn79CVehz91A4J9nbh6SPPvDdhba1&type=swap" target="_blank">trade swd</a></li>
@@ -507,13 +552,13 @@ const FlagCloseHandler = ()=>{
                 </a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="soc" target="_blank">
-                        <img src="/static/img/svg/main/tl.svg" alt=""/>
+                            <a href="#" data-toggle="soc" onClick={openShareLanguageHandler}>
+                        <img src="/static/img/svg/main/tl.svg" alt=""  />
                     </a>
                         </li>
                         <li>
-                            <a href="#" data-toggle="lang" className="lang">
-                        <img src="/static/img/flags/en.png" alt=""/>
+                            <a href="#" data-toggle="lang" className="lang"    >
+                        <img src="/static/img/flags/en.png" alt="" onClick={HandlerFlagmenu}/>
                     </a>
                         </li>
                     </ul>
@@ -557,9 +602,9 @@ const FlagCloseHandler = ()=>{
      
 
 
-        <div className="modal" data-modal="level">
+        <div className="modal Details-modal" data-modal="level">
             <div className="modal__container modal-stat" style={{maxWidth:"857px"}}>
-                <button className="close"><img src="/static/img/svg/main/close.svg" alt=""/></button>
+                <button className="close" onClick={DetailsClikeHandler}  ><img src="/static/img/svg/main/close.svg" alt=""/></button>
                 <div className="modal-content">
                     <div className="container">
                         <h3 style={{marginTop: "40px"}}>CURRENT SWORD TOKEN MINING RATES</h3>

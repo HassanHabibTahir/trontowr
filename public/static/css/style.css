@@ -1106,7 +1106,7 @@ footer .logo img {
     z-index: 11;
     visibility: hidden;
 }
-/* .sign_modal  .close{
+ .close{
 
     margin-left: auto;
     background: #F9FFFF;
@@ -1127,13 +1127,13 @@ footer .logo img {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    top: -28px;
+    top: -18px;
     right: 2px;
     position: absolute;
     z-index: 111;
 
 
-} */
+}
 
 .sign_modal.active {
     opacity: 1;
