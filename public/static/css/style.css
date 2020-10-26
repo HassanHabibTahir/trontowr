@@ -1095,7 +1095,7 @@ footer .logo img {
 
 
 .modal{
-    background: url(../img/png/bg_mobile.png) #ECEEFF top center no-repeat;
+    /* background: url(../img/png/bg_mobile.png) #ECEEFF top center no-repeat; */
     background-size: 100%;
     background-position-y: -100px;
     position: fixed;
@@ -2364,8 +2364,39 @@ footer .logo img {
     }
     .animate1 {
         left: 0;
+        height: 25rem;
         top: 20px !important;
+        animation: animateFish 1s ease infinite;
+     
     }
+
+    @keyframes animateFish {
+       
+        0%{
+            -webkit-transform: translate(0, -17);
+            /* transform: rotate(-10deg); */
+        }
+        50%{
+            -webkit-transform: translate(0, 8px);
+            /* transform: rotate(-23deg); */
+        }
+
+        100% {
+            -webkit-transform: translate(0, -17);
+          }
+        /* 0% {
+            -webkit-transform: translate(0, -5);
+          }
+          50% {
+            -webkit-transform: translate(0, 5px);
+          }
+          100% {
+            -webkit-transform: translate(0, -5);
+          } */
+
+    }
+
+
     .stk {
         padding: 0;
     }
@@ -2445,6 +2476,7 @@ footer .logo img {
         max-width: 558px;
     }
     body {
+        /* background-color: #5da6bb; */
         background: url("../img/png/bg.png") top center;
         background-position-y: -20px;
     }
