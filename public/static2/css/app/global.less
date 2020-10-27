@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 1.4rem;
+  line-height: 1.5;
+
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word;
+  position: relative;
+  width: 100%;
+  letter-spacing: 0.05em;
+
+  background-color: #F9F9FF;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  color: #1D1D3D;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+footer{
+  margin-top: auto;
+}
+.main {
+
+
+}
+
+.global_section {
+  background: url("../img/png/bg_mobile.png") no-repeat fade(#DEFFFD, 75);
+  background-size: 100% 100%;
+  background-position-y: 25px;
+  padding-top: 20px;
+  padding-bottom: 114px;
+
+  h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 162.5%;
+    letter-spacing: 2px;
+  }
+}
+
+h3, h1, h2, h5, h4 {
+  margin: 0;
+}
+
+.center_sharp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+
+  h4 {
+    color: #50B4F2;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 13px;
+  }
+
+  h5 {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1D1D3D;
+    margin-bottom: 18px;
+  }
+
+  > button {
+    width: 100%;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 22px;
+
+    div {
+      margin-bottom: 10px;
+      display: flex;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+
+      b {
+        margin-left: auto;
+        margin-right: 5px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.modal-content{
+  display: flex;
+  width: 100%;
+}
+.logo_sharp {
+  //background: #F9FFFF;
+  box-shadow: 0px 24px 40px rgba(78, 159, 209, 0.3);
+  width: 195.03px;
+  height: 195.03px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  margin-bottom: 34px;
+  margin-top: 39px;
+
+  img {
+    height: 87px;
+    margin-top: 38px;
+    display: initial !important;
+    max-width: initial !important;
+    @media (min-width: 800px) {
+      height: 120px;
+      margin-top: 60px;
+    }
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-top: -30px;
+    position: absolute;
+    bottom: 30px;
+    @media (min-width: 800px) {
+
+    }
+  }
+}
+
+#animation_container {
+  margin-top: -112px;
+  transform: scale(0.55);
+}

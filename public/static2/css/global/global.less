@@ -1,0 +1,148 @@
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+body {
+  font-family: @fontFamily;
+  font-size: 1.4rem;
+  line-height: 1.5;
+
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+
+
+  word-wrap: break-word;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &._scroll-lock {
+    overflow: hidden;
+  }
+}
+
+a {
+  color: inherit;
+  transition-property: color, background-color;
+  text-decoration: none;
+}
+
+iframe {
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
+  fill: currentColor;
+}
+
+
+input[type='text'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type='text']::-ms-clear,
+input[type='text']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+  //font-family: @fontFamily;
+  //font-size: 2.2rem;
+  //line-height: 1.2;
+  //letter-spacing: .05em;
+  //font-weight: 600;
+  border-width: 0;
+  padding: 1.7rem 2rem;
+  background-color: fade(#6BA5FF, 7);
+  border-radius: .2rem;
+
+  &::placeholder {
+    font: inherit;
+    //color: #3A4D4E;
+    //font-style: italic;
+    //padding-left: .1rem;
+  }
+  //
+  //transition-property: box-shadow;
+  //transition-duration: @time;
+}
+
+textarea {
+  resize: vertical;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 3rem;
+
+}
+
+//.text-gradient-blue {
+//  color: #6EC0E4;
+//
+//  @supports (-webkit-background-clip: text) {
+//    background: linear-gradient(to bottom, #79D2E6, #6EC0E4);
+//    -webkit-background-clip: text;
+//    -webkit-text-fill-color: transparent;
+//  }
+//}
+//
+//.text-gradient-green {
+//  color: #56CDC0;
+//
+//  @supports (-webkit-background-clip: text) {
+//    background: linear-gradient(to bottom, #93E6DD, #56CDC0);
+//    -webkit-background-clip: text;
+//    -webkit-text-fill-color: transparent;
+//  }
+//}

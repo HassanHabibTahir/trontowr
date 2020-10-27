@@ -1,0 +1,2 @@
+export const WALLET_BALLANCE = 'WALLET_BALLANCE';
+// export const CART_REMOVE_ITEM = 'CART_REMOVE_ITEM'
